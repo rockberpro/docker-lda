@@ -45,6 +45,7 @@ alias dcpb='docker compose build'
 alias dcpl='docker compose logs'
 alias dcplf='docker compose logs -f'
 alias dcpr='docker compose restart'
+alias dcps='docker compose stop'
 
 # --- MANAGEMENT ---
 alias dst='docker start'
