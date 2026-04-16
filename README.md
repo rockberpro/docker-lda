@@ -2,7 +2,7 @@
   <img src="resources/img/logo.png" alt="docker-lda" width="200">
 </p>
 
-<h1 align="center">LDA — Logical Docker Aliases</h1>
+<h1 align="center">Logical Docker Aliases</h1>
 
 <p align="center">A curated set of short, memorable Docker aliases organized by category.</p>
 
