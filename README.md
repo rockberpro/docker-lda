@@ -53,19 +53,23 @@ Run `lda` to see every alias right in your terminal:
 
 ## Install
 
+**Linux / macOS / WSL:**
+
 ```bash
 curl -sL https://raw.githubusercontent.com/rockberpro/docker-lda/main/setup.sh | bash
 ```
 
-Then reload your shell:
+**Windows (PowerShell):**
 
-```bash
-source ~/.bashrc
+```powershell
+iwr -useb https://raw.githubusercontent.com/rockberpro/docker-lda/main/setup.ps1 | iex
 ```
 
-The setup script adds a single `source` line to `~/.bashrc` and copies two files to `~/`. You can read the full source ([setup.sh](setup.sh)) before running it, or use the manual install below.
+Then reload your shell (`source ~/.bashrc` on Bash, `. $PROFILE` on PowerShell).
 
-**Manual install:**
+The setup scripts add a single source line to your shell profile and copy two files to `~/`. You can read the full source ([setup.sh](setup.sh), [setup.ps1](setup.ps1)) before running, or use the manual install below.
+
+**Manual install (Bash):**
 
 ```bash
 curl -sL https://raw.githubusercontent.com/rockberpro/docker-lda/main/docker-lda.sh \
@@ -76,6 +80,19 @@ curl -sL https://raw.githubusercontent.com/rockberpro/docker-lda/main/docker-lda
 
 echo 'source ~/.docker-lda.sh' >> ~/.bashrc
 source ~/.bashrc
+```
+
+**Manual install (PowerShell):**
+
+```powershell
+iwr -useb https://raw.githubusercontent.com/rockberpro/docker-lda/main/docker-lda.ps1 `
+  -OutFile "$HOME\.docker-lda.ps1"
+
+iwr -useb https://raw.githubusercontent.com/rockberpro/docker-lda/main/docker-lda-help.ps1 `
+  -OutFile "$HOME\.docker-lda-help.ps1"
+
+Add-Content -Path $PROFILE -Value "`n. `"$HOME\.docker-lda.ps1`""
+. $PROFILE
 ```
 
 ## Alias Reference
@@ -117,11 +134,21 @@ source ~/.bashrc
 
 ## Uninstall
 
+**Bash:**
+
 ```bash
 sed -i '/source ~\/.docker-lda.sh/d' ~/.bashrc
 rm ~/.docker-lda.sh ~/.docker-lda-help.sh
 ```
 
+**PowerShell:**
+
+```powershell
+$content = Get-Content $PROFILE | Where-Object { $_ -notlike '*\.docker-lda.ps1*' }
+Set-Content $PROFILE $content
+Remove-Item "$HOME\.docker-lda.ps1", "$HOME\.docker-lda-help.ps1"
+```
+
 ---
 
-[setup.sh](setup.sh) · [docker-lda.sh](docker-lda.sh) · [docker-lda-help.sh](docker-lda-help.sh)
+[setup.sh](setup.sh) · [docker-lda.sh](docker-lda.sh) · [docker-lda-help.sh](docker-lda-help.sh) · [setup.ps1](setup.ps1) · [docker-lda.ps1](docker-lda.ps1) · [docker-lda-help.ps1](docker-lda-help.ps1)
