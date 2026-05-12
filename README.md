@@ -11,7 +11,7 @@ Two-letter **prefix** picks the command. One-letter **suffix** is the first lett
 ```
 dpl   → docker pull            dps   → docker ps
 drn   → docker run             dpsa  → docker ps -a
-drni  → docker run -it         drc   → docker rm
+drni  → docker run -it         drm   → docker rm
 
 dlg   → docker logs            dim   → docker image
 dlgf  → docker logs -f         dils  → docker image ls
@@ -104,7 +104,7 @@ Add-Content -Path $PROFILE -Value "`n. `"$HOME\.docker-lda.ps1`""
 | `drni`  | `docker run -it`           | Pull / Run  |
 | `dps`   | `docker ps`                | Container   |
 | `dpsa`  | `docker ps -a`             | Container   |
-| `drc`   | `docker rm`                | Container   |
+| `drm`   | `docker rm`                | Container   |
 | `dex`   | `docker exec`              | Container   |
 | `dexi`  | `docker exec -it`          | Container   |
 | `dlg`   | `docker logs`              | Logs        |

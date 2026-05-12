@@ -17,7 +17,7 @@ function drni { docker run -it @args }
 # --- CONTAINER ---
 function dps  { docker ps @args }
 function dpsa { docker ps -a @args }
-function drc  { docker rm @args }
+function drm  { docker rm @args }
 function dex  { docker exec @args }
 function dexi { docker exec -it @args }
 

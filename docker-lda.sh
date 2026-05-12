@@ -17,7 +17,7 @@ alias drni='docker run -it'
 # --- CONTAINER ---
 alias dps='docker ps'
 alias dpsa='docker ps -a'
-alias drc='docker rm'
+alias drm='docker rm'
 alias dex='docker exec'
 alias dexi='docker exec -it'
 
