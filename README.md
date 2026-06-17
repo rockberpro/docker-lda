@@ -23,14 +23,14 @@ dvrm  → docker volume rm       dsy   → docker system
 ```
 
 ```
-dcp   → docker compose         dst   → docker start
-dcpu  → docker compose up      dsp   → docker stop
-dcpud → docker compose up -d   drs   → docker restart
-dcpd  → docker compose down    dip   → docker inspect
-dcpb  → docker compose build
-dcpl  → docker compose logs
-dcplf → docker compose logs -f
-dcpr  → docker compose restart
+dc    → docker compose         dst   → docker start
+dcu   → docker compose up      dsp   → docker stop
+dcud  → docker compose up -d   drs   → docker restart
+dcd   → docker compose down    dip   → docker inspect
+dcb   → docker compose build
+dcl   → docker compose logs
+dclf  → docker compose logs -f
+dcr   → docker compose restart
 ```
 
 Run `lda` to see every alias right in your terminal:
@@ -116,14 +116,15 @@ Add-Content -Path $PROFILE -Value "`n. `"$HOME\.docker-lda.ps1`""
 | `dv`    | `docker volume`            | Volume      |
 | `dvls`  | `docker volume ls`         | Volume      |
 | `dvrm`  | `docker volume rm`         | Volume      |
-| `dcp`   | `docker compose`           | Compose     |
-| `dcpu`  | `docker compose up`        | Compose     |
-| `dcpud` | `docker compose up -d`     | Compose     |
-| `dcpd`  | `docker compose down`      | Compose     |
-| `dcpb`  | `docker compose build`     | Compose     |
-| `dcpl`  | `docker compose logs`      | Compose     |
-| `dcplf` | `docker compose logs -f`   | Compose     |
-| `dcpr`  | `docker compose restart`   | Compose     |
+| `dc`    | `docker compose`           | Compose     |
+| `dcu`   | `docker compose up`        | Compose     |
+| `dcud`  | `docker compose up -d`     | Compose     |
+| `dcd`   | `docker compose down`      | Compose     |
+| `dcb`   | `docker compose build`     | Compose     |
+| `dcl`   | `docker compose logs`      | Compose     |
+| `dclf`  | `docker compose logs -f`   | Compose     |
+| `dcr`   | `docker compose restart`   | Compose     |
+| `dcs`   | `docker compose stop`      | Compose     |
 | `dst`   | `docker start`             | Management  |
 | `dsp`   | `docker stop`              | Management  |
 | `drs`   | `docker restart`           | Management  |

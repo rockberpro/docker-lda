@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+
+- **Breaking:** Compose aliases now use the `dc` prefix instead of `dcp` (e.g. `dcpu` → `dcu`, `dcpd` → `dcd`, `dcps` → `dcs`). The bare `dc` alias shadows the system `dc` calculator in interactive shells.
+
 ## [0.1.0] - 2026-04-16
 
 ### Added
