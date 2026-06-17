@@ -37,15 +37,15 @@ function dvls { docker volume ls @args }
 function dvrm { docker volume rm @args }
 
 # --- COMPOSE ---
-function dcp   { docker compose @args }
-function dcpu  { docker compose up @args }
-function dcpud { docker compose up -d @args }
-function dcpd  { docker compose down @args }
-function dcpb  { docker compose build @args }
-function dcpl  { docker compose logs @args }
-function dcplf { docker compose logs -f @args }
-function dcpr  { docker compose restart @args }
-function dcps  { docker compose stop @args }
+function dc   { docker compose @args }
+function dcu  { docker compose up @args }
+function dcud { docker compose up -d @args }
+function dcd  { docker compose down @args }
+function dcb  { docker compose build @args }
+function dcl  { docker compose logs @args }
+function dclf { docker compose logs -f @args }
+function dcr  { docker compose restart @args }
+function dcs  { docker compose stop @args }
 
 # --- MANAGEMENT ---
 function dst { docker start @args }
